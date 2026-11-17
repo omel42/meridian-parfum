@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f9f8f5">
+  <meta name="robots" content="noindex,nofollow">
+  <meta property="og:image" content="https://omel42.github.io/meridian-parfum/assets/hero.png">
+  <title>Меридиан — найди свой аромат</title>
+  <meta name="description" content="Меридиан — коллекция культовых и нишевых ароматов. Найдите свой аромат по нотам, настроению и парфюмерному дому.">
+  <meta property="og:url" content="https://omel42.github.io/meridian-parfum/">
+  <meta property="og:title" content="Меридиан — найди свой аромат"><meta property="og:description" content="Парфюмерия с характером. Коллекция ароматов, которые становятся частью тебя."><meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/icon.png"><link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#catalog">Перейти к каталогу</a>
+<div class="announcement"><span>У каждого аромата — своё направление. Найди своё.</span><button data-action="quiz">Подобрать аромат <span aria-hidden="true">↗</span></button></div>
+<header class="header">
+  <a href="#" class="wordmark" aria-label="Меридиан — главная"><img src="assets/icon.png" alt="" width="37" height="37"><span>меридиан<span class="brand-dot">.</span></span></a>
+  <nav aria-label="Главная навигация"><a href="#catalog" data-nav="all">Каталог</a><a href="#catalog" data-nav="niche">Нишевая парфюмерия</a><a href="#brands">Бренды</a><a href="#about">О Меридиане</a></nav>
+  <div class="header-actions"><button class="icon-button" data-action="search" aria-label="Поиск ароматов" data-icon="search"></button><button class="icon-button favorites-button" data-action="favorites" aria-label="Избранное"><span data-icon="heart"></span><i id="favorite-count" hidden>0</i></button><button class="bag-button" data-action="cart" aria-label="Открыть корзину"><span data-icon="bag"></span><span class="bag-label">Корзина</span><b id="cart-count">0</b></button></div>
+</header>
+<main id="storefront">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy"><p class="eyebrow"><span class="orange-dot"></span> ПАРФЮМЕРИЯ С ХАРАКТЕРОМ</p><h1 id="hero-title">Твой аромат.<br>Твои <span class="serif">правила.</span></h1><p class="hero-description">Не просто ноты — твоя история.<br>Культовые композиции и нишевые открытия,<br class="desktop-only"> в которых легко узнать себя.</p><div class="hero-buttons"><a href="#catalog" class="button black">Исследовать коллекцию <span data-icon="arrow"></span></a><button class="text-button" data-action="quiz">Найти свой аромат <span data-icon="diagonal"></span></button></div><div class="hero-bottom"><span class="tiny-cross">✳</span><p>ТВОЯ НОВАЯ<br>ТОЧКА ПРИТЯЖЕНИЯ</p><span class="hero-index">01 / MERIDIAN EDIT</span></div></div>
+    <div class="hero-visual"><img src="assets/hero.png" alt="Стеклянные флаконы с янтарным ароматом в лучах солнца" fetchpriority="high" width="1536" height="1024"><div class="hero-photo-top"><span>THE ART OF SCENT</span><span>2026 COLLECTION</span></div><div class="hero-photo-bottom"><span>За пределами<br>привычного.</span><a href="#catalog" aria-label="Перейти к коллекции" class="round-arrow" data-icon="diagonal"></a></div></div>
+  </section>
+  <section class="brand-strip" id="brands" aria-label="Парфюмерные дома"><span class="brand-strip-label">ДОМА,<br>КОТОРЫЕ МЫ ЛЮБИМ</span><button data-brand="BYREDO" class="brand-byredo">BYREDO</button><button data-brand="Dior" class="brand-dior">Dior</button><button data-brand="CHANEL" class="brand-chanel">CHANEL</button><button data-brand="diptyque" class="brand-diptyque">diptyque</button><button data-brand="TOM FORD" class="brand-tom">TOM FORD</button><button data-brand="LE LABO" class="brand-lelabo">LE LABO</button></section>
+  <section class="catalog section" id="catalog" aria-labelledby="catalog-title">
+    <div class="section-heading"><div><p class="eyebrow">ТВОЙ ПАРФЮМЕРНЫЙ ГАРДЕРОБ</p><h2 id="catalog-title">Начни с притяжения<span class="brand-dot">.</span></h2></div><p class="heading-aside">Знакомые имена.<br>Неожиданные совпадения.</p></div>
+    <div class="catalog-toolbar"><div class="tabs" role="group" aria-label="Для кого"><button class="active" data-category="all" aria-pressed="true">Все ароматы</button><button data-category="women" aria-pressed="false">Для неё</button><button data-category="men" aria-pressed="false">Для него</button><button data-category="unisex" aria-pressed="false">Унисекс</button></div><div class="catalog-controls"><button class="filter-button" data-action="filters"><span data-icon="sliders"></span> Фильтры <span id="filter-count"></span></button><label class="sort-label"><span class="sr-only">Сортировка</span><select id="sort"><option value="featured">Наш выбор</option><option value="price-asc">Сначала дешевле</option><option value="price-desc">Сначала дороже</option><option value="name">По названию</option></select></label></div></div>
+    <div id="active-filters" class="active-filters" hidden></div><div class="catalog-meta"><span id="result-count" role="status">Собираем коллекцию…</span><span>Найди то самое звучание</span></div>
+    <div class="product-grid" id="products" aria-label="Каталог ароматов"></div><div class="empty-state" id="empty-state" hidden><span data-icon="search"></span><h3>Пока без совпадений</h3><p>Попробуй другой бренд или расширь диапазон цены.</p><button class="button black" data-action="reset">Сбросить фильтры</button></div>
+    <p class="catalog-footnote">Цены в предпросмотре — пример розничного предложения, наличие уточняется перед запуском магазина.</p>
+  </section>
+  <section class="discovery section" aria-labelledby="discovery-title"><div class="discovery-art"><span class="discovery-orbit orbit-one"></span><span class="discovery-orbit orbit-two"></span><span class="discovery-orbit orbit-three"></span><span class="discovery-star">✳</span><span class="discovery-coordinate">ТВОЯ ТОЧКА НА КАРТЕ АРОМАТОВ</span></div><div class="discovery-copy"><p class="eyebrow">ПАРФЮМЕРНЫЙ КОМПАС</p><h2 id="discovery-title">Тот самый аромат.<br><span class="serif">Ближе, чем кажется.</span></h2><p>Свежий или обволакивающий? На каждый день или для особенного вечера? Три вопроса — и у тебя появится своё направление.</p><button class="button black" data-action="quiz">Подобрать за минуту <span data-icon="arrow"></span></button><span class="discovery-small">Без регистрации. Только твои ощущения.</span></div></section>
+  <section class="about section" id="about"><p class="eyebrow">ФИЛОСОФИЯ МЕРИДИАНА</p><div class="about-main"><h2>Хороший аромат<br>не меняет тебя.<br><span class="serif">Он тебя раскрывает.</span></h2><div><p>Мы собрали Меридиан для тех, кто выбирает сердцем, а не по правилам. Здесь классика встречается с нишевой парфюмерией, а у каждого флакона есть характер.</p><p>Изучай ноты, сравнивай впечатления и находи композиции, которые звучат в унисон с тобой. Гендер, сезон и повод — только подсказки. Последнее слово всегда за тобой.</p><a class="text-button" href="#catalog">Найти своё направление <span data-icon="diagonal"></span></a></div></div></section>
+  <section class="service-strip section" aria-label="Покупать удобно"><div><span data-icon="sparkle"></span><h3>Выбор по ощущениям</h3><p>Ноты и характер каждого аромата<br>в понятных карточках.</p></div><div><span data-icon="heart"></span><h3>Сохрани притяжение</h3><p>Добавляй в избранное и возвращайся<br>к своим открытиям.</p></div><div><span data-icon="bag"></span><h3>Всё под рукой</h3><p>Быстрая корзина и понятный<br>путь к оформлению.</p></div><div><span data-icon="compass"></span><h3>Твой личный компас</h3><p>Подборка под твой характер,<br>настроение и бюджет.</p></div></section>
+</main>
+<footer class="footer"><div class="footer-top"><a class="wordmark" href="#">меридиан<span class="brand-dot">.</span></a><p>Мир ароматов.<br>Твои координаты.</p><div><span>ИССЛЕДОВАТЬ</span><a href="#catalog">Все ароматы</a><button data-action="quiz">Подбор аромата</button><button data-action="favorites">Избранное</button></div><div><span>ПОКУПАТЕЛЯМ</span><button data-info="delivery">Доставка и оплата</button><button data-info="returns">Проверка заказа</button><button data-info="privacy">Конфиденциальность</button></div></div><div class="footer-bottom"><span>© 2026 Меридиан</span><span>ПРЕДПРОСМОТР МАГАЗИНА · ЗАКАЗЫ И ОПЛАТА В ДЕМО-РЕЖИМЕ</span><a href="#" aria-label="Наверх">Наверх ↑</a></div></footer>
+<dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<noscript><div class="noscript">Для поиска, корзины и подбора аромата включите JavaScript в браузере.</div></noscript>
+</body>
+</html>
