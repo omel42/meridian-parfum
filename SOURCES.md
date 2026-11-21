@@ -17,6 +17,6 @@
 | Yves Saint Laurent Libre | 50 мл | [Производитель](https://www.yslbeauty.com/int/fragrance/fragrance-for-her/libre/libre-eau-de-parfum/WW-50424YSL.html) | [Оригинал](https://www.yslbeauty.com/dw/image/v2/BDCR_PRD/on/demandware.static/-/Sites-ysl-master-catalog/en/dw469e11e9/square/Fragrance/Libre_EDP/v23614272648418_libre_eau_de_parfum_50ml.webp?q=85&sfrm=png&sh=1000&sm=cut&sw=1000) |
 | Tom Ford Lost Cherry | 50 мл | [Производитель](https://www.tomfordbeauty.co.uk/product/lost-cherry-eau-de-parfum) | [Оригинал](https://sdcdn.io/tf/tf_sku_T6LN01_2000x2000_0.png?height=1000px&width=1000px) |
 
-Файлы изображений загружены в `assets/products` и визуально проверены на совпадение аромата. Фотографии сохранены без подмены генерированными флаконами.
+Файлы изображений загружены в `assets/products` и визуально проверены на совпадение аромата. Для Philosykos фон исходной фотографии удалён встроенным image_gen; витрина использует `philosykos-transparent.png` с прозрачностью. Оригинал `philosykos.jpg` сохранён.
 
 Права на фотографии и товарные знаки остаются у их владельцев; наличие изображения в открытом доступе не означает лицензию на коммерческое использование. Для запуска магазина нужны разрешённые поставщиком/брендом фотографии или собственная съёмка.
