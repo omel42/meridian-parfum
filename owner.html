@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#ff5c28">
+  <meta name="description" content="Рабочая тетрадь владельца «Меридиана»: вопросы для запуска интернет-магазина.">
+  <title>Следующая глава «Меридиана» — вопросы владельцу</title>
+  <link rel="icon" href="assets/icon.png">
+  <link rel="stylesheet" href="owner.css">
+  <script src="owner.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#questions">Перейти к вопросам</a>
+  <header class="workbook-header">
+    <a class="wordmark" href="./" aria-label="Меридиан — вернуться в магазин"><img src="assets/icon.png" alt="">меридиан<span>●</span></a>
+    <a class="back-link" href="./">Посмотреть магазин <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <section class="workbook-hero" aria-labelledby="workbook-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Рабочая тетрадь владельца · версия 02</p>
+        <h1 id="workbook-title">Два магазина.<br>Впереди —<br><span>вся страна.</span></h1>
+        <p class="hero-lead">Ты знаешь покупателей и парфюмерию. Мы превращаем этот опыт в удобный интернет-магазин. Давай вместе разберёмся, что он должен уметь.</p>
+        <a class="button primary" href="#essentials">Начать с 10 главных вопросов <span aria-hidden="true">↓</span></a>
+      </div>
+      <aside class="hero-note" aria-label="Как отвечать">
+        <span class="note-mark" aria-hidden="true">✳</span>
+        <p class="eyebrow">Это разговор, не экзамен</p>
+        <h2>«Пока не знаю» —<br>тоже хороший ответ.</h2>
+        <p>Можно отвечать коротко, по частям или записать голосовое по номерам вопросов. Примеры из жизни магазина полезнее идеальных формулировок.</p>
+        <div class="note-divider"></div>
+        <p>Сначала попробуй три сценария: найди знакомый аромат, сравни два флакона и пройди оформление без оплаты. Отмечай всё, что хочется изменить. Хорошие идеи часто приходят уже после первого обсуждения.</p>
+      </aside>
+    </section>
+    <section class="privacy-note" aria-label="Как сохраняются ответы">
+      <span class="privacy-icon" aria-hidden="true">↳</span>
+      <p><strong>Ответы остаются в этом браузере.</strong> Эта страница ничего не отправляет нам. Чтобы передать ответы другу, скачай файл и отправь его сам. На другом устройстве продолжить можно через импорт JSON. Не вводи пароли, ключи доступа и данные покупателей; закупочные цены лучше обсудить в отдельном закрытом файле.</p>
+    </section>
+    <div class="workbook-layout">
+      <aside class="workbook-sidebar">
+        <div class="progress-panel">
+          <p class="eyebrow">Ваш маршрут</p>
+          <p class="progress-title"><strong id="answered-count">0</strong><span> / 24 ответа</span></p>
+          <progress id="answer-progress" value="0" max="24" aria-label="Заполнено вопросов"></progress>
+          <p id="essential-progress">Главные вопросы: 0 из 10</p>
+          <nav id="section-nav" aria-label="Разделы вопросов"></nav>
+          <p id="save-status" role="status" aria-live="polite">Автосохранение включится после первого ответа.</p>
+        </div>
+      </aside>
+      <div class="workbook-content">
+        <noscript><p class="notice">Для формы нужен JavaScript. Включи его в браузере или открой текстовую версию вопросов из материалов проекта.</p></noscript>
+        <form id="questions" novalidate aria-label="Вопросы владельцу магазина"></form>
+        <section class="handoff" aria-labelledby="handoff-title">
+          <p class="eyebrow">Следующий шаг</p>
+          <h2 id="handoff-title">Ответы превращаем<br>в решения.</h2>
+          <p>Сохрани то, что уже есть. На следующем обсуждении выберем ассортимент для старта, разберём путь заказа и решим, что автоматизировать первым.</p>
+          <div class="export-actions">
+            <button class="button primary" id="download-md" type="button">Скачать ответы текстом <span aria-hidden="true">↓</span></button>
+            <button class="button secondary" id="download-json" type="button">Резервная копия JSON</button>
+            <button class="button secondary" id="import-button" type="button">Загрузить ответы</button>
+            <button class="button secondary" id="print-button" type="button">Печать / PDF</button>
+          </div>
+          <input type="file" id="import-file" accept="application/json,.json" hidden>
+          <p id="file-status" class="file-status" role="status" aria-live="polite"></p>
+          <button class="reset-button" id="reset-button" type="button">Очистить ответы в этом браузере</button>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer><span>меридиан · рабочая тетрадь</span><span>Сначала ясные решения. Потом автоматизация.</span><a href="./">Открыть макет магазина ↗</a></footer>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title" aria-describedby="confirm-description">
+    <h2 id="confirm-title">Заменить ответы?</h2>
+    <p id="confirm-description"></p>
+    <div class="dialog-actions"><button id="confirm-cancel" class="button secondary" type="button">Отмена</button><button id="confirm-accept" class="button primary" type="button">Продолжить</button></div>
+  </dialog>
+</body>
+</html>
