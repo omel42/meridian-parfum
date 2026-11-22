@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#102c23">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Атлас ощущений — Меридиан</title>
+  <meta name="description" content="Сначала почувствуй. Выбери пейзаж, настроение и фактуру — открой аромат, который стоит за этим образом.">
+  <link rel="icon" type="image/png" href="assets/icon-green.png">
+  <link rel="preload" as="font" type="font/ttf" href="assets/prata-regular.ttf" crossorigin>
+  <link rel="stylesheet" href="experience.css?v=1.0.0">
+  <script src="experience.js?v=1.0.0" defer></script>
+</head>
+<body>
+  <a class="skip" href="#world-picker">Выбрать ощущение</a>
+  <header class="atlas-header">
+    <a class="atlas-brand" href="index.html" aria-label="Меридиан — главная"><img src="assets/meridian-wordmark.png" width="230" height="34" alt="Меридиан"></a>
+    <span class="atlas-edition">АТЛАС ОЩУЩЕНИЙ <span>01—03</span></span>
+    <a class="back-store" href="index.html#catalog">В магазин <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="atlas">
+    <div class="load-state" id="loading" role="status"><span class="load-line"></span><p>Собираем твоё первое впечатление…</p></div>
+    <div class="load-error" id="load-error" hidden><p class="eyebrow">НУЖНО ЕЩЁ МГНОВЕНИЕ</p><h1>Образы пока<br>не загрузились.</h1><p>Проверь подключение и попробуй снова.</p><button class="light-button" id="retry">Попробовать ещё раз</button><a href="index.html#catalog">Открыть каталог</a></div>
+
+    <div class="atlas-content" id="atlas-content" hidden>
+      <div class="experience-heading"><div><p class="eyebrow">СНАЧАЛА ЧУВСТВО. ПОТОМ ИМЯ.</p><h1>У аромата есть пейзаж.</h1></div><p>Куда тебе хочется<br>попасть прямо сейчас?</p></div>
+
+      <div class="scene-shell" id="scene-shell">
+        <section class="scent-scene" id="scent-scene" data-chapter="0" aria-labelledby="world-title">
+          <img class="scene-image" id="scene-image" src="assets/hero-green.png" alt="" decoding="async">
+          <div class="scene-veil" aria-hidden="true"></div>
+          <div class="scene-coordinate"><span id="world-number">01 / 03</span><span>MERIDIAN / SENSORY ATLAS</span></div>
+          <div class="scene-copy">
+            <p class="scene-eyebrow" id="world-eyebrow"></p>
+            <h2 id="world-title"></h2>
+            <p class="scene-subtitle" id="world-subtitle"></p>
+            <button class="scene-reveal" id="reveal">Раскрыть аромат <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="chapter-copy" id="chapter-copy" aria-hidden="true"><p id="chapter-label"></p><h3 id="chapter-title"></h3><span id="chapter-body"></span></div>
+          <div class="atmosphere" id="atmosphere" aria-label="Характер образа"></div>
+          <span class="scene-wordmark" aria-hidden="true">м.</span>
+          <div class="film-brand"><img src="assets/meridian-wordmark.png" width="230" height="34" alt="Меридиан"><span>АРОМАТ — ЛИЧНОЕ.</span></div>
+          <div class="film-product" id="film-product" aria-hidden="true"><span id="film-product-brand"></span><h3 id="film-product-name"></h3><img id="film-product-image" alt=""><p id="film-product-notes"></p><small>Визуальная история аромата / Меридиан</small></div>
+          <div class="film-footer"><span id="film-chapter-counter">01 / 03</span><span>ВИЗУАЛЬНАЯ АССОЦИАЦИЯ</span></div>
+          <div class="film-progress" aria-hidden="true"><span id="film-progress"></span></div>
+        </section>
+      </div>
+
+      <div class="experience-controls">
+        <button class="play-button" id="play" aria-label="Смотреть историю, 24 секунды"><span id="play-icon" aria-hidden="true">▶</span><span id="play-label">Смотреть 24 секунды</span></button>
+        <div class="chapter-navigation" id="chapter-navigation" role="group" aria-label="Фазы визуальной истории"></div>
+        <button class="film-toggle" id="film-toggle" aria-pressed="false"><span class="portrait-icon" aria-hidden="true"></span><span id="film-toggle-label">Кино 9:16</span></button>
+      </div>
+      <div class="film-tools" id="film-tools" hidden>
+        <p>Вертикальная история без интерфейса внутри кадра. Нажми «Полный экран» и включи запись экрана. Для выхода — Esc.</p>
+        <button class="light-button" id="fullscreen">Полный экран и воспроизведение <span aria-hidden="true">↗</span></button>
+      </div>
+
+      <section class="world-picker" id="world-picker" aria-labelledby="world-picker-title"><div class="picker-heading"><h2 id="world-picker-title">Выбирай ощущение.</h2><p>Три характера. Три способа оказаться в другом месте.</p></div><div class="world-options" id="world-options" role="group" aria-label="Миры ароматов"></div></section>
+
+      <section class="identity" id="identity" hidden aria-labelledby="identity-title">
+        <div class="identity-image"><img id="identity-image" alt=""><span>ОБРАЗ ОБРЕТАЕТ ИМЯ</span></div>
+        <div class="identity-copy"><p class="eyebrow" id="identity-brand"></p><h2 id="identity-title"></h2><p class="identity-specs" id="identity-specs"></p><p class="identity-description" id="identity-description"></p><div class="identity-notes" id="identity-notes"></div><div class="identity-purchase"><span id="identity-price"></span><a class="dark-button" id="product-link" href="index.html#catalog">Познакомиться ближе <span aria-hidden="true">↗</span></a></div><p class="identity-disclaimer">Цена в предпросмотре — пример. Наличие и цену подтвердит магазин.</p></div>
+      </section>
+
+      <section class="story-share" aria-labelledby="share-title"><div><p class="eyebrow">ИСТОРИЯ, КОТОРОЙ ХОЧЕТСЯ ПОДЕЛИТЬСЯ</p><h2 id="share-title">Уместить ощущение<br>в 24 секунды.</h2><p>Вертикальный кадр, крупные титры и описание аромата — основа для твоего следующего ролика.</p></div><div class="share-actions"><button class="share-primary" id="share-caption">Скопировать описание <span aria-hidden="true">↗</span></button><button id="share-link">Скопировать ссылку</button><a class="video-download" id="video-download" download hidden>Скачать готовый ролик MP4 <span aria-hidden="true">↓</span></a><label class="copy-fallback" id="copy-fallback" hidden><span>Скопируй текст вручную</span><textarea id="copy-text" rows="5" readonly></textarea></label></div></section>
+      <p class="atlas-note">Визуальная ассоциация. Впечатление на коже индивидуально. История передаёт характер композиции и не описывает точное время раскрытия или стойкость.</p>
+    </div>
+  </main>
+  <footer class="atlas-footer"><a href="index.html">МЕРИДИАН</a><span>Чувствовать. Выбирать. Быть собой.</span><a href="index.html#catalog">Вернуться к ароматам ↗</a></footer>
+  <div class="status-message" id="status-message" role="status" aria-live="polite" hidden></div>
+  <noscript><p class="noscript">Для визуального подбора включи JavaScript. <a href="index.html#catalog">Перейти в магазин</a>.</p></noscript>
+</body>
+</html>

@@ -123,3 +123,25 @@ dialog.concierge .modal-head{flex-shrink:0}
 .compare-product img{height:var(--compare-image-height);background:transparent;mix-blend-mode:multiply}
 .search-row img,.cart-item img{background:transparent}
 @media(max-width:600px){.compare-product{--compare-image-height:125px}.concierge-product-back{margin:6px 18px;font-size:11px}}
+/* Scent atlas: visual invitations, with the scent revealed inside the story. */
+.atlas-teaser{margin-top:100px;margin-bottom:100px}
+.atlas-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:34px}
+.atlas-heading h2{font-size:clamp(48px,6.2vw,88px);font-weight:400;letter-spacing:-.065em;line-height:1.05;margin:23px 0 0}
+.atlas-heading h2 span{font-family:Prata,Georgia,serif;letter-spacing:-.06em}
+.atlas-heading-note{padding-bottom:7px;max-width:290px}.atlas-heading-note p{font-size:17px;line-height:1.8;margin-bottom:22px;color:var(--muted)}
+.atlas-heading .text-button{display:inline-flex;gap:30px;align-items:center}.atlas-heading .text-button span{font-size:25px}
+.atlas-landscapes{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:14px;align-items:start}
+.atlas-landscape{position:relative;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:.82;overflow:hidden;background:#123f32;color:#faf7eb;padding:25px;isolation:isolate}
+.atlas-landscape::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#061c2090,transparent 45%,#071d1cd9);z-index:-1}
+.atlas-landscape img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.atlas-landscape:hover img{transform:scale(1.035)}.atlas-landscape:focus-visible{outline:3px solid #25634b;outline-offset:5px}
+.atlas-wood{margin-top:44px;background:#27261a}.atlas-cherry{margin-top:88px;background:#2b0d17}.atlas-cherry::after{background:linear-gradient(180deg,#21050c55,transparent 40%,#16070ddb)}
+.atlas-number{font-size:10px;letter-spacing:.15em}.atlas-landscape-title{font:clamp(26px,3.6vw,48px)/1.17 Prata,Georgia,serif;letter-spacing:-.05em;margin-top:auto;margin-bottom:28px}
+.atlas-landscape-notes{display:flex;justify-content:space-between;gap:12px;font-size:11px;line-height:1.5;align-items:center}.atlas-landscape-notes b{font:24px Manrope,sans-serif}
+.atlas-footnote{display:flex;justify-content:space-between;align-items:center;gap:45px;margin-top:30px}.atlas-footnote p{max-width:540px;color:var(--muted);font-size:12px;line-height:1.8}.atlas-footnote button{white-space:nowrap;font-size:13px}
+.nav-atlas{color:var(--accent);font-weight:700}.picker-mode.picker-visual{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.picker-mode span{display:block;font-size:9px;letter-spacing:.04em;font-weight:400;opacity:.76;margin-top:2px}
+.scent-detail-link{position:relative;display:block;background:#edf2e8;border:1px solid #d4dfcb;padding:15px 42px 15px 17px;margin:22px 0;color:#173a2f;line-height:1.5}.scent-detail-link span{font-size:14px;font-weight:600}.scent-detail-link small{display:block;margin-top:4px;color:var(--muted);font-size:11px}.scent-detail-link b{position:absolute;right:16px;top:20px;font-size:24px;font-weight:400}.scent-detail-link:hover{background:#e3ecd9}
+@media(min-width:851px){.main-nav{gap:clamp(16px,2vw,28px);font-size:13px}}
+@media(max-width:850px){.atlas-teaser{margin-top:70px;margin-bottom:65px}.atlas-heading{gap:25px}.atlas-heading-note p{font-size:14px}.atlas-landscapes{gap:10px}.atlas-landscape{padding:18px}.atlas-landscape-title{font-size:30px}.atlas-landscape-notes{font-size:9px}.atlas-number{font-size:8px}.atlas-wood{margin-top:28px}.atlas-cherry{margin-top:56px}}
+@media(max-width:600px){.atlas-teaser{margin-top:58px;margin-bottom:58px}.atlas-heading{display:block;margin-bottom:25px}.atlas-heading h2{font-size:54px;margin-top:18px}.atlas-heading .eyebrow{font-size:9px;letter-spacing:.1em}.atlas-heading-note{margin-top:22px;max-width:none;display:flex;align-items:center;justify-content:space-between;gap:20px}.atlas-heading-note p{font-size:12px;line-height:1.7;margin:0}.atlas-heading .text-button{font-size:12px;gap:10px;white-space:nowrap}.atlas-landscapes{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:0 0 12px;scrollbar-width:thin;scrollbar-color:#b8c9af transparent}.atlas-landscape{flex:0 0 82%;aspect-ratio:.87;padding:23px;scroll-snap-align:start}.atlas-wood,.atlas-cherry{margin-top:0}.atlas-landscape-title{font-size:41px}.atlas-number{font-size:9px}.atlas-landscape-notes{font-size:10px}.atlas-footnote{display:block;margin-top:15px}.atlas-footnote p{font-size:11px}.atlas-footnote button{margin-top:18px;font-size:12px}.picker-mode{font-size:11px;padding-inline:6px}}
+@media(prefers-reduced-motion:reduce){.atlas-landscape img{transition:none}.atlas-landscape:hover img{transform:none}}
